@@ -30,7 +30,7 @@ jobs:
   sonar-static-analysis:
     runs-on: ubuntu-latest
     container: gradle:8.5.0-jdk21-alpine
-    needs: build
+    needs: ci
     env:
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
     steps:
