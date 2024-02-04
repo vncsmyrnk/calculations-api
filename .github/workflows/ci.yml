@@ -26,8 +26,10 @@ jobs:
           echo "$(cat build.log | tail -n 2)" >> $GITHUB_STEP_SUMMARY
           echo "# Test results" >> $GITHUB_STEP_SUMMARY
           echo "$(cat scan.log | tail -n 2)" >> $GITHUB_STEP_SUMMARY
+          echo "# Sonar scan" >> $GITHUB_STEP_SUMMARY
+          echo "https://sonarcloud.io/project/information?id=clocked-app_calculations-api" >> $GITHUB_STEP_SUMMARY
 
-  sonar-static-analysis:
+  upload-coverage-to-sonar-cloud:
     runs-on: ubuntu-latest
     container: gradle:8.5.0-jdk21-alpine
     needs: ci
@@ -37,5 +39,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: SonarCloud Analysis
+      - name: Upload coverage to SonarCloud
         run: ./gradlew sonar -Dsonar.gradle.skipCompile=true
