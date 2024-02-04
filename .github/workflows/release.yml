@@ -66,7 +66,7 @@ jobs:
           build-args: |
             WTC_VERSION=${{ github.ref_name }}
           tags: |
-            clockedwtc/wtc:latest
-            clockedwtc/wtc:${{ github.ref_name }}
-            ghcr.io/vncsmyrnk/wtc:latest
-            ghcr.io/vncsmyrnk/wtc:${{ github.ref_name }}
+            clockedwtc/calculations-api:latest
+            clockedwtc/calculations-api:${{ github.ref_name }}
+            ghcr.io/clocked-app/calculations-api:latest
+            ghcr.io/clocked-app/calculations-api:${{ github.ref_name }}

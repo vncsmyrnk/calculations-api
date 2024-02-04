@@ -19,7 +19,7 @@ COPY --from=base /var/app .
 RUN ./gradlew bootJar
 
 # Stage 3: Optimized deploy-ready image
-LABEL org.opencontainers.image.source=https://github.com/vncsmyrnk/work-time-calculator
+LABEL org.opencontainers.image.source=https://github.com/clocked-app/calculations-api
 FROM eclipse-temurin:21-jdk-alpine
 ARG WTC_VERSION=v0.0.0
 ENV WTC_VERSION=${WTC_VERSION}
