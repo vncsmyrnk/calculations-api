@@ -1,10 +1,10 @@
-# Work Time Calculator
+# Calculations API
 
 <img src="https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot" /> <img src="https://img.shields.io/badge/Github%20Actions-282a2e?style=for-the-badge&logo=githubactions&logoColor=367cfe" />
 <br>
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=com.clocked%3Awork-time-calculator&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=com.clocked%3Awork-time-calculator)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=com.clocked%3Awork-time-calculator&metric=coverage)](https://sonarcloud.io/summary/new_code?id=com.clocked%3Awork-time-calculator)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=com.clocked%3Awork-time-calculator&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=com.clocked%3Awork-time-calculator)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=clocked-app_calculations-api&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=clocked-app_calculations-api)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=clocked-app_calculations-api&metric=coverage)](https://sonarcloud.io/summary/new_code?id=clocked-app_calculations-api)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=clocked-app_calculations-api&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=clocked-app_calculations-api)
 <br>
 <br>
 
@@ -43,12 +43,12 @@ A SonarCloud action is used to check for vulnerabilities and static analysis.
 
 ## Deployment
 
-The release automated workflow publishes the docker images on [Docker Hub](https://hub.docker.com/r/clockedwtc/wtc/tags) and [GitHub Container Registry](https://github.com/vncsmyrnk/work-time-calculator/pkgs/container/wtc).
+The release automated workflow publishes the docker images on [Docker Hub](https://hub.docker.com/r/clockedwtc/calculations-api/tags) and [GitHub Container Registry](https://github.com/clocked-app/calculations-api/pkgs/container/wtc).
 
 After pulling the images from the most appropriate location, execute one of the following commands to run the image:
 
 ```bash
-docker run --rm -p {PORT}:8080 ghcr.io/vncsmyrnk/wtc:{VERSION} # or
-docker run --rm -p {PORT}:8080 clockedwtc/wtc:{VERSION}
+docker run --rm -p {PORT}:8080 ghcr.io/clocked-app/calculations-api:{VERSION} # or
+docker run --rm -p {PORT}:8080 clockedwtc/calculations-api:{VERSION}
 
 ```
