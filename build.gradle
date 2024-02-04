@@ -52,7 +52,7 @@ jacocoTestCoverageVerification {
 
 sonar {
   properties {
-    property('sonar.projectName', 'calculations-api')
+    property('sonar.projectName', 'clocked-app_calculations-api')
     property('sonar.organization', 'clocked-app')
     property('sonar.host.url', 'https://sonarcloud.io')
     property('sonar.gradle.skipCompile', 'true')
