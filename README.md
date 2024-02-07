@@ -6,6 +6,9 @@
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=clocked-app_calculations-api&metric=coverage)](https://sonarcloud.io/summary/new_code?id=clocked-app_calculations-api)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=clocked-app_calculations-api&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=clocked-app_calculations-api)
 <br>
+![CI](https://github.com/clocked-app/calculations-api/actions/workflows/ci.yml/badge.svg)
+![Release](https://github.com/clocked-app/calculations-api/actions/workflows/release.yml/badge.svg)
+<br>
 <br>
 
 This is an app built with Spring Boot and Gradle to calculate work time for a given parameter inputs.
