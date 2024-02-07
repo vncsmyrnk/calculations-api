@@ -13,7 +13,7 @@ EOF
 COPY . .
 
 # Stage 2: Build stage
-FROM gradle:8.5.0-jdk20-alpine as build
+FROM eclipse-temurin:20-jdk-alpine as build
 WORKDIR /var/app/
 COPY --from=base /var/app .
 RUN ./gradlew bootJar
