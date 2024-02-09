@@ -3,6 +3,7 @@ package com.clocked.worktimecalculator;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.matchesRegex;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.options;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -82,5 +83,27 @@ class ApplicationTests {
         .andExpect(jsonPath("$.date", is("Date must be informed")))
         .andExpect(jsonPath("$.registeredRecords", is("Registered records must be informed")))
         .andExpect(jsonPath("$.shiftRecords", is("Shift records must be informed")));
+  }
+
+  @Test
+  void shouldPermitAllowedOrigins() throws Exception {
+    this.mockMvc
+        .perform(
+            options("/")
+                .header("Access-Control-Request-Method", "GET")
+                .header("Origin", "http://localhost:8080"))
+        .andDo(print())
+        .andExpect(status().isOk());
+  }
+
+  @Test
+  void shouldBlockNotAllowedOrigins() throws Exception {
+    this.mockMvc
+        .perform(
+            options("/")
+                .header("Access-Control-Request-Method", "GET")
+                .header("Origin", "http://www.someurl.com"))
+        .andDo(print())
+        .andExpect(status().isForbidden());
   }
 }
