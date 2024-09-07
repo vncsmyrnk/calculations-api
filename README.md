@@ -53,5 +53,4 @@ After pulling the images from the most appropriate location, execute one of the 
 ```bash
 docker run --rm -p {PORT}:8080 ghcr.io/clocked-app/calculations-api:{VERSION} # or
 docker run --rm -p {PORT}:8080 clockedwtc/calculations-api:{VERSION}
-
 ```
